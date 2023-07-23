@@ -5,9 +5,7 @@ node {
     sh 'npm install'   
     }
     stage('Test') {
-    withDockerContainer(image: 'qnib/pytest', args:'-i --entrypoint=""'){
     sh './jenkins/scripts/test.sh'
         }
     }
   }
-}
